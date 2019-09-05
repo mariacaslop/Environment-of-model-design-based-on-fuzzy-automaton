@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition">
+  <gmfgraph:Canvas name="fuzzyAutomaton">
+    <figures name="Default">
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="TransitionFigureTargetDecoration"/>
+      <descriptors name="StateFigure">
+        <actualFigure xsi:type="gmfgraph:Ellipse" name="StateFigure" lineWidth="2">
+          <foregroundColor xsi:type="gmfgraph:RGBColor" red="154" green="205" blue="50"/>
+          <backgroundColor xsi:type="gmfgraph:RGBColor" red="154" green="205" blue="50"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="10" left="10" bottom="10" right="10"/>
+          </border>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="VariableSetFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="VariableSetFigure">
+          <preferredSize dx="125" dy="150"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="VariableSetLabelFigure" text="VariableSet">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="VariableSetVariablesCompartmentFigure" outline="false"/>
+        </actualFigure>
+        <accessors accessor="getFigureVariableSetLabelFigure" figure="/0/@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+        <accessors accessor="getVariableSetVariablesCompartmentFigure" figure="/0/@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      </descriptors>
+      <descriptors name="VariableFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="VariableFigure" outline="false">
+          <preferredSize dx="90" dy="25"/>
+          <children xsi:type="gmfgraph:Label" name="VariableLabelFigure" text="Variable"/>
+        </actualFigure>
+        <accessors accessor="getFigureVariableLabelFigure" figure="/0/@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="TransitionFeatureFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TransitionFeatureFigure">
+          <preferredSize dx="160" dy="160"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="TransitionFeatureLabelFigure" text="TransitionFeature">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="TransitionFeatureActionCompartmentFigure" outline="false"/>
+          <children xsi:type="gmfgraph:Rectangle" name="TransitionFeatureFuzzyConstraintCompartmentFigure" outline="false"/>
+          <children xsi:type="gmfgraph:Rectangle" name="TransitionFeatureVarTransformationCompartmentFigure" outline="false"/>
+        </actualFigure>
+        <accessors accessor="getFigureTransitionFeatureLabelFigure" figure="/0/@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+        <accessors accessor="getTransitionFeatureActionCompartmentFigure" figure="/0/@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+        <accessors accessor="getTransitionFeatureFuzzyConstraintCompartmentFigure" figure="/0/@figures.0/@descriptors.3/@actualFigure/@children.2"/>
+        <accessors accessor="getTransitionFeatureVarTransformationCompartmentFigure" figure="/0/@figures.0/@descriptors.3/@actualFigure/@children.3"/>
+      </descriptors>
+      <descriptors name="InputFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="InputFigure">
+          <preferredSize dx="90" dy="25"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="InputLabelFigure" text="Input"/>
+        </actualFigure>
+        <accessors accessor="getFigureInputLabelFigure" figure="/0/@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="OutputFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="OutputFigure">
+          <preferredSize dx="90" dy="25"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="OutputLabelFigure" text="Output"/>
+        </actualFigure>
+        <accessors accessor="getFigureOutputLabelFigure" figure="/0/@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="FuzzyConstraintFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="FuzzyConstraintFigure" outline="false">
+          <children xsi:type="gmfgraph:Label" name="FuzzyConstraintLabelFigure" text="FuzzyConstraint">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="FuzzyConstraintFuzzyRelationsCompartmentFigure" outline="false"/>
+        </actualFigure>
+        <accessors accessor="getFigureFuzzyConstraintLabelFigure" figure="/0/@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+        <accessors accessor="getFuzzyConstraintFuzzyRelationsCompartmentFigure" figure="/0/@figures.0/@descriptors.6/@actualFigure/@children.1"/>
+      </descriptors>
+      <descriptors name="FuzzyRelationFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="FuzzyRelationFigure">
+          <preferredSize dx="100" dy="25"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="FuzzyRelationLabelFigure" text="FuzzyRelation"/>
+        </actualFigure>
+        <accessors accessor="getFigureFuzzyRelationLabelFigure" figure="/0/@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="VarTransformationFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="VarTransformationFigure" outline="false">
+          <children xsi:type="gmfgraph:Label" name="VarTransformationLabelFigure" text="VarTransformation">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="VarTransformationVarUpdatesCompartmentFigure" outline="false"/>
+        </actualFigure>
+        <accessors accessor="getFigureVarTransformationLabelFigure" figure="/0/@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+        <accessors accessor="getVarTransformationVarUpdatesCompartmentFigure" figure="/0/@figures.0/@descriptors.8/@actualFigure/@children.1"/>
+      </descriptors>
+      <descriptors name="VarUpdateFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="VarUpdateFigure">
+          <preferredSize dx="100" dy="25"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="VarUpdateLabelFigure" text="VarUpdate"/>
+        </actualFigure>
+        <accessors accessor="getFigureVarUpdateLabelFigure" figure="/0/@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+      </descriptors>
+      <descriptors name="TransitionFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TransitionFigure" lineWidth="3" targetDecoration="/0/@figures.0/@figures.0">
+          <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="140"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="TransitionFeatureFeatureToTransitionFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TransitionFeatureFeatureToTransitionFigure" lineWidth="3" lineKind="LINE_DASH">
+          <foregroundColor xsi:type="gmfgraph:RGBColor" red="105" green="105" blue="105"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="TransitionFeatureFeatureToTransitionExternalLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="TransitionFeatureFeatureToTransitionExternalLabel"/>
+      </descriptors>
+    </figures>
+    <nodes name="State" figure="StateFigure"/>
+    <nodes name="VariableSet" figure="VariableSetFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="125" dy="150"/>
+      </facets>
+    </nodes>
+    <nodes name="Variable" figure="VariableFigure"/>
+    <nodes name="TransitionFeature" figure="TransitionFeatureFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="160" dy="160"/>
+      </facets>
+    </nodes>
+    <nodes name="Input" figure="InputFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="150" dy="25"/>
+      </facets>
+    </nodes>
+    <nodes name="Output" figure="OutputFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="150" dy="25"/>
+      </facets>
+    </nodes>
+    <nodes name="FuzzyConstraint" figure="FuzzyConstraintFigure"/>
+    <nodes name="FuzzyRelation" figure="FuzzyRelationFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="150" dy="25"/>
+      </facets>
+    </nodes>
+    <nodes name="VarTransformation" figure="VarTransformationFigure"/>
+    <nodes name="VarUpdate" figure="VarUpdateFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="150" dy="25"/>
+      </facets>
+    </nodes>
+    <connections name="Transition" figure="TransitionFigure"/>
+    <connections name="TransitionFeatureFeatureToTransition" figure="TransitionFeatureFeatureToTransitionFigure"/>
+    <compartments name="VariableSetVariablesCompartment" figure="VariableSetFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.1/@accessors.1"/>
+    <compartments name="TransitionFeatureActionCompartment" figure="TransitionFeatureFigure" accessor="/0/@figures.0/@descriptors.3/@accessors.1"/>
+    <compartments name="TransitionFeatureFuzzyConstraintCompartment" figure="TransitionFeatureFigure" accessor="/0/@figures.0/@descriptors.3/@accessors.2"/>
+    <compartments name="TransitionFeatureVarTransformationCompartment" figure="TransitionFeatureFigure" accessor="/0/@figures.0/@descriptors.3/@accessors.3"/>
+    <compartments name="FuzzyConstraintFuzzyRelationsCompartment" figure="FuzzyConstraintFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.6/@accessors.1"/>
+    <compartments name="VarTransformationVarUpdatesCompartment" figure="VarTransformationFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.8/@accessors.1"/>
+    <labels name="VariableSetLabel" figure="VariableSetFigure" accessor="/0/@figures.0/@descriptors.1/@accessors.0"/>
+    <labels name="VariableLabel" figure="VariableFigure" accessor="/0/@figures.0/@descriptors.2/@accessors.0"/>
+    <labels name="TransitionFeatureLabel" figure="TransitionFeatureFigure" accessor="/0/@figures.0/@descriptors.3/@accessors.0"/>
+    <labels name="InputLabel" figure="InputFigure" accessor="/0/@figures.0/@descriptors.4/@accessors.0"/>
+    <labels name="OutputLabel" figure="OutputFigure" accessor="/0/@figures.0/@descriptors.5/@accessors.0"/>
+    <labels name="FuzzyConstraintLabel" figure="FuzzyConstraintFigure" accessor="/0/@figures.0/@descriptors.6/@accessors.0"/>
+    <labels name="FuzzyRelationLabel" figure="FuzzyRelationFigure" accessor="/0/@figures.0/@descriptors.7/@accessors.0"/>
+    <labels name="VarTransformationLabel" figure="VarTransformationFigure" accessor="/0/@figures.0/@descriptors.8/@accessors.0"/>
+    <labels name="VarUpdateLabel" figure="VarUpdateFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.9/@accessors.0"/>
+    <labels name="TransitionFeatureFeatureToTransitionExternalLabel" figure="TransitionFeatureFeatureToTransitionExternalLabelFigure" elementIcon="false"/>
+  </gmfgraph:Canvas>
+  <gmfgraph:Label name="StateLabelFigure" text="State"/>
+</xmi:XMI>

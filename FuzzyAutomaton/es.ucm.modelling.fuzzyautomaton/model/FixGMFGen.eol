@@ -1,0 +1,3 @@
+-- Remove unused parsers
+var genparsers = GmfGen!GenParsers.all.first;
+genparsers.implementations = genparsers.implementations.select(p|not p.uses.isEmpty());

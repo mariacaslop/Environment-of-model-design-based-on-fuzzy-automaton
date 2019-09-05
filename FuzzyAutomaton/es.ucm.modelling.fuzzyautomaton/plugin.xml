@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated fuzzyAutomaton -->
+      <package
+            uri="fuzzyAutomaton"
+            class="fuzzyAutomaton.FuzzyAutomatonPackage"/>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ant.core.antRunner"
+            name="Fuzzy Automata Graph Editor">
+         <property
+               name="appName"
+               value="Fuzzy Automata Graph Editor">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="productV1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Fuzzy Automata Graph Editor">
+         <property
+               name="appName"
+               value="Fuzzy Automata Graph Editor">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="productfzza"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Fuzzy Automaton Graphical Editor">
+         <property
+               name="appName"
+               value="Fuzzy Automaton Graphical Editor">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="FuzzyAutomatonProduct"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="FuzzyAutomaton">
+         <property
+               name="appName"
+               value="FuzzyAutomaton">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

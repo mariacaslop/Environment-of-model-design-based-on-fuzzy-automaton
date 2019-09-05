@@ -1,0 +1,161 @@
+[* Finite Automaton TNorm *]
+[% 	
+	var faNorm: String="HAMACHER"; 
+	var fa = t_fuzzyAutomaton.all.first();
+  	
+  	if (fa.a_tNorm.isDefined()) {faNorm=fa.a_tNorm;}
+%]
+[%=faNorm%]
+[* Set of variables. decVars stores the index of the variables and the corresponding names*]
+[%
+	var listVars: String=""; var decVars: Map;  var iString: String; var i: Integer=0;
+
+	for (variable in t_variables.all) { 
+		
+		if (listVars="") {listVars= variable.a_name;}
+		else {listVars=listVars + "," + variable.a_name;}
+		
+		iString=""+ i;
+		decVars.put(iString,variable.a_name);
+		i++;
+}%]
+[%=listVars%]
+[* Set of states and initial state *]
+[%
+	var listStates: String=""; 	var initState: String;
+	
+  	i=0;
+  	
+	for (state in t_states.all) { 
+		
+		if (listStates="") {listStates= "s" + i;}
+		else {listStates=listStates + "," + "s" + i;}
+		
+		if (state.a_isInitial="true") {initState="s" + i;}
+		
+		i++;
+}%]
+[%=listStates%]
+[%=initState%]
+[* Set of transitions*]
+[% 
+	var trName: String;
+	
+	i=0;
+	
+	for (transition in t_transitions.all) { 
+		trName="@transitions."+ i;
+%]
+[* Intial and final states*]
+[%="s"+transition.a_source.substring(10)+ " " + "s" +transition.a_target.substring(10)%]
+[* Corresponding Transition Features*]
+[% 
+	var data=t_transitionFeatures.all.selectOne(tf| trName.isSubstringOf(tf.a_featureToTransition));
+%]
+[*Action + list of parameters for input actions or expressions for output actions*]
+[% 
+   	var act = data.children.selectOne(a|a.tagName = "action");
+   
+   	var listParams: String; var list: String=""; 
+   	var cabParam: String="//@variableSet/@variables."; 
+  	var lastPos: Integer; 
+   
+   
+   act.text.println();
+   
+   listParams= listParams+ act.a_name;
+   
+   if (act.a_parameters.isDefined()) {
+   
+		listParams=listParams + " ";
+	   	list=act.a_parameters;
+	   	list=list.replace(cabParam,"");
+	   	list=list.replace(" ","");
+  
+   
+	   	while (list<>""){
+   
+	        listParams=listParams+ decVars.get(list.characterAt(0)) + ",";
+	        list=list.substring(1);
+	    }
+	    
+	   	lastPos= listParams.length()-1;
+	   	listParams=listParams.substring(0,lastPos);
+	}
+	
+	var exprOut=act.children.select(e| e.tagName = "expression");
+	
+	if (not exprOut.isEmpty()){
+		
+		listParams=listParams + " ";
+		
+		for (expr in exprOut){
+			listParams=listParams + expr.text + ",";
+		}
+		
+		lastPos= listParams.length()-1;
+	    listParams=listParams.substring(0,lastPos);
+	}
+%]
+[%=listParams%]
+[* Fuzzy Constraints*]
+[%
+	var fconstraint = data.children.selectOne(a|a.tagName = "fuzzyConstraint");
+  	var trNorm: String="HAMACHER";
+  	var listFRel: String; var op: String;
+ 
+   	if (fconstraint.isDefined()){
+ 		if (fconstraint.a_tNorm.isDefined()) {trNorm=fconstraint.a_tNorm;}
+%]
+[* TNorm corresponding to the fuzzy relations associated with the transition*]
+[%=trNorm%]
+[* Fuzzy relations associated with the transition*]
+[% 	
+	
+		var frelations = fconstraint.children.select(a|a.tagName = "fuzzyRelations");
+		
+		for (fr in frelations) { 
+			
+			switch (fr.a_tFRelation){				
+				case "LTE": op="<=";
+				case "TERN": op="<=";
+				case "GTE": op=">=";
+				default: op="=";
+			}
+			
+			listFRel=listFRel + fr.a_expression1 + op + fr.a_expression2;
+			if (fr.a_tFRelation="TERN") {listFRel=listFRel + op + fr.a_expression3;}
+			listFRel=listFRel + " [" + fr.a_delta + "]"  + ",";
+		}
+		lastPos= listFRel.length()-1;
+	    listFRel=listFRel.substring(0,lastPos);
+	}
+	else {listFRel="True";}
+%]
+[%=listFRel%]
+[* Variable Transformations associated with the transition*]
+[%
+	var listVUpdates: String;
+	
+	var varTransformation = data.children.selectOne(a|a.tagName = "varTransformation");
+	
+ 	if (varTransformation.isDefined()){
+ 	
+		var vUpdates = varTransformation.children.select(a|a.tagName = "varUpdates");
+		
+
+		
+		for (vu in vUpdates) { 			
+
+			listVUpdates=listVUpdates + decVars.get(vu.a_variable.characterAt(26)) + "=" + vu.a_expression;
+			listVUpdates=listVUpdates  + ",";
+		}
+		
+		lastPos= listVUpdates.length()-1;
+	    listVUpdates=listVUpdates.substring(0,lastPos);
+	}
+	else {listVUpdates="ID";}
+%]
+[%=listVUpdates%]	
+[%	i++;
+}%]

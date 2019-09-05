@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated fuzzyAutomaton -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fuzzyAutomaton.presentation.FuzzyAutomatonModelWizardID"
+            name="%_UI_FuzzyAutomatonModelWizard_label"
+            class="fuzzyAutomaton.presentation.FuzzyAutomatonModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FuzzyAutomatonModelFile.gif">
+         <description>%_UI_FuzzyAutomatonModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated fuzzyAutomaton -->
+      <editor
+            id="fuzzyAutomaton.presentation.FuzzyAutomatonEditorID"
+            name="%_UI_FuzzyAutomatonEditor_label"
+            icon="icons/full/obj16/FuzzyAutomatonModelFile.gif"
+            extensions="fuzzyautomaton"
+            class="fuzzyAutomaton.presentation.FuzzyAutomatonEditor"
+            contributorClass="fuzzyAutomaton.presentation.FuzzyAutomatonActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

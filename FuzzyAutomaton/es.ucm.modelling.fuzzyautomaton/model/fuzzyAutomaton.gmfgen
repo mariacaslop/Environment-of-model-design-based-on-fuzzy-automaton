@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgen:GenEditorGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel" diagramFileExtension="fza_diagram" domainFileExtension="fza" copyrightText="">
+  <diagram visualID="1000" editPartClassName="FuzzyAutomatonEditPart" itemSemanticEditPolicyClassName="FuzzyAutomatonItemSemanticEditPolicy" canonicalEditPolicyClassName="FuzzyAutomatonCanonicalEditPolicy" iconProviderPriority="Low" validationProviderPriority="Low" validationEnabled="true" validationDecorators="true" liveValidationUIFeedback="true">
+    <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+    <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="FuzzyAutomatonEditHelper"/>
+    <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
+    <containsShortcutsTo>fza</containsShortcutsTo>
+    <shortcutsProvidedFor>fza</shortcutsProvidedFor>
+    <domainDiagramElement href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton"/>
+    <childNodes visualID="3001" editPartClassName="VariableEditPart" itemSemanticEditPolicyClassName="VariableItemSemanticEditPolicy" canonicalEditPolicyClassName="VariableCanonicalEditPolicy" graphicalNodeEditPolicyClassName="VariableGraphicalNodeEditPolicy" createCommandClassName="VariableCreateCommand" containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="VariableEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="VariableFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class VariableFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureVariableLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public VariableFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setOutline(false);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(90)&#xA;, getMapMode().DPtoLP(25)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureVariableLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureVariableLabelFigure.setText(&quot;Variable&quot;);&#xA;&#xA;this.add(fFigureVariableLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureVariableLabelFigure() {&#xA;&#x9;&#x9;return fFigureVariableLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="90" height="25"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Variable"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VariableSet/variables"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VariableSet/variables"/>
+      </modelFacet>
+      <labels visualID="5003" editPartClassName="VariableNameEditPart" itemSemanticEditPolicyClassName="VariableNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureVariableLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Variable/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3002" editPartClassName="InputEditPart" itemSemanticEditPolicyClassName="InputItemSemanticEditPolicy" canonicalEditPolicyClassName="InputCanonicalEditPolicy" graphicalNodeEditPolicyClassName="InputGraphicalNodeEditPolicy" createCommandClassName="InputCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="InputEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="InputFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InputFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureInputLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InputFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(90)&#xA;, getMapMode().DPtoLP(25)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureInputLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureInputLabelFigure.setText(&quot;Input&quot;);&#xA;&#xA;this.add(fFigureInputLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureInputLabelFigure() {&#xA;&#x9;&#x9;return fFigureInputLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="150" height="25"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Input"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/action"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/action"/>
+      </modelFacet>
+      <labels visualID="5006" editPartClassName="InputNameEditPart" itemSemanticEditPolicyClassName="InputNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureInputLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Action/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3003" editPartClassName="OutputEditPart" itemSemanticEditPolicyClassName="OutputItemSemanticEditPolicy" canonicalEditPolicyClassName="OutputCanonicalEditPolicy" graphicalNodeEditPolicyClassName="OutputGraphicalNodeEditPolicy" createCommandClassName="OutputCreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="OutputEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="OutputFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class OutputFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureOutputLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public OutputFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(90)&#xA;, getMapMode().DPtoLP(25)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureOutputLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureOutputLabelFigure.setText(&quot;Output&quot;);&#xA;&#xA;this.add(fFigureOutputLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureOutputLabelFigure() {&#xA;&#x9;&#x9;return fFigureOutputLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="150" height="25"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Output"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/action"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/action"/>
+      </modelFacet>
+      <labels visualID="5007" editPartClassName="OutputNameEditPart" itemSemanticEditPolicyClassName="OutputNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureOutputLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Action/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3004" editPartClassName="FuzzyConstraintEditPart" itemSemanticEditPolicyClassName="FuzzyConstraintItemSemanticEditPolicy" canonicalEditPolicyClassName="FuzzyConstraintCanonicalEditPolicy" compartments="//@diagram/@compartments.4" graphicalNodeEditPolicyClassName="FuzzyConstraintGraphicalNodeEditPolicy" createCommandClassName="FuzzyConstraintCreateCommand" containers="//@diagram/@compartments.2">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="FuzzyConstraintEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="FuzzyConstraintFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FuzzyConstraintFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFuzzyConstraintLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFuzzyConstraintFuzzyRelationsCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FuzzyConstraintFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setOutline(false);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFuzzyConstraintLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureFuzzyConstraintLabelFigure.setText(&quot;FuzzyConstraint&quot;);&#xA;fFigureFuzzyConstraintLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureFuzzyConstraintLabelFigure);&#xA;&#xA;&#xA;&#xA;fFuzzyConstraintFuzzyRelationsCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fFuzzyConstraintFuzzyRelationsCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fFuzzyConstraintFuzzyRelationsCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFuzzyConstraintLabelFigure() {&#xA;&#x9;&#x9;return fFigureFuzzyConstraintLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFuzzyConstraintFuzzyRelationsCompartmentFigure() {&#xA;&#x9;&#x9;return fFuzzyConstraintFuzzyRelationsCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyConstraint"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/fuzzyConstraint"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/fuzzyConstraint"/>
+      </modelFacet>
+      <labels visualID="5008" editPartClassName="FuzzyConstraintNameTNormEditPart" itemSemanticEditPolicyClassName="FuzzyConstraintNameTNormItemSemanticEditPolicy" readOnly="true" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureFuzzyConstraintLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{0} ({1})" editorPattern="{0} ({1})" editPattern="{0} ({1})">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyConstraint/name"/>
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyConstraint/tNorm"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3005" editPartClassName="FuzzyRelationEditPart" itemSemanticEditPolicyClassName="FuzzyRelationItemSemanticEditPolicy" canonicalEditPolicyClassName="FuzzyRelationCanonicalEditPolicy" graphicalNodeEditPolicyClassName="FuzzyRelationGraphicalNodeEditPolicy" createCommandClassName="FuzzyRelationCreateCommand" containers="//@diagram/@compartments.4">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="FuzzyRelationEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="FuzzyRelationFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FuzzyRelationFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFuzzyRelationLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FuzzyRelationFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(25)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFuzzyRelationLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureFuzzyRelationLabelFigure.setText(&quot;FuzzyRelation&quot;);&#xA;&#xA;this.add(fFigureFuzzyRelationLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFuzzyRelationLabelFigure() {&#xA;&#x9;&#x9;return fFigureFuzzyRelationLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="150" height="25"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyRelation"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyConstraint/fuzzyRelations"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyConstraint/fuzzyRelations"/>
+      </modelFacet>
+      <labels visualID="5011" editPartClassName="FuzzyRelationTFRelationExpression1ExEditPart" itemSemanticEditPolicyClassName="FuzzyRelationTFRelationExpression1ExItemSemanticEditPolicy" readOnly="true" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureFuzzyRelationLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{1} {0} {2} {0} {3} {4}" editorPattern="{1} {0} {2} {0} {3} {4}" editPattern="{1} {0} {2} {0} {3} {4}">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyRelation/tFRelation"/>
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyRelation/expression1"/>
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyRelation/expression2"/>
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyRelation/expression3"/>
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyRelation/delta"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3006" editPartClassName="VarTransformationEditPart" itemSemanticEditPolicyClassName="VarTransformationItemSemanticEditPolicy" canonicalEditPolicyClassName="VarTransformationCanonicalEditPolicy" compartments="//@diagram/@compartments.5" graphicalNodeEditPolicyClassName="VarTransformationGraphicalNodeEditPolicy" createCommandClassName="VarTransformationCreateCommand" containers="//@diagram/@compartments.3">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="VarTransformationEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="VarTransformationFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class VarTransformationFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureVarTransformationLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fVarTransformationVarUpdatesCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public VarTransformationFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setOutline(false);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureVarTransformationLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureVarTransformationLabelFigure.setText(&quot;VarTransformation&quot;);&#xA;fFigureVarTransformationLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureVarTransformationLabelFigure);&#xA;&#xA;&#xA;&#xA;fVarTransformationVarUpdatesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fVarTransformationVarUpdatesCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fVarTransformationVarUpdatesCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureVarTransformationLabelFigure() {&#xA;&#x9;&#x9;return fFigureVarTransformationLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getVarTransformationVarUpdatesCompartmentFigure() {&#xA;&#x9;&#x9;return fVarTransformationVarUpdatesCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VarTransformation"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/varTransformation"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/varTransformation"/>
+      </modelFacet>
+      <labels visualID="5009" editPartClassName="VarTransformationNameEditPart" itemSemanticEditPolicyClassName="VarTransformationNameItemSemanticEditPolicy" readOnly="true" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureVarTransformationLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VarTransformation/name"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3007" editPartClassName="VarUpdateEditPart" itemSemanticEditPolicyClassName="VarUpdateItemSemanticEditPolicy" canonicalEditPolicyClassName="VarUpdateCanonicalEditPolicy" graphicalNodeEditPolicyClassName="VarUpdateGraphicalNodeEditPolicy" createCommandClassName="VarUpdateCreateCommand" containers="//@diagram/@compartments.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="VarUpdateEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="VarUpdateFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class VarUpdateFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureVarUpdateLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public VarUpdateFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(100)&#xA;, getMapMode().DPtoLP(25)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureVarUpdateLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureVarUpdateLabelFigure.setText(&quot;VarUpdate&quot;);&#xA;&#xA;this.add(fFigureVarUpdateLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureVarUpdateLabelFigure() {&#xA;&#x9;&#x9;return fFigureVarUpdateLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="150" height="25"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VarUpdate"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VarTransformation/varUpdates"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VarTransformation/varUpdates"/>
+      </modelFacet>
+      <labels visualID="5010" editPartClassName="VarUpdateExpressionEditPart" itemSemanticEditPolicyClassName="VarUpdateExpressionItemSemanticEditPolicy" readOnly="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureVarUpdateLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VarUpdate/expression"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <topLevelNodes visualID="2001" editPartClassName="StateEditPart" itemSemanticEditPolicyClassName="StateItemSemanticEditPolicy" canonicalEditPolicyClassName="StateCanonicalEditPolicy" graphicalNodeEditPolicyClassName="StateGraphicalNodeEditPolicy" createCommandClassName="StateCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="StateEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="StateFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class StateFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public StateFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(10)&#xA;, getMapMode().DPtoLP(10)&#xA;, getMapMode().DPtoLP(10)&#xA;, getMapMode().DPtoLP(10)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 154, 205, 50);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 154, 205, 50);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedForeground="true" fixedBackground="true"/>
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/State"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton/states"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton/states"/>
+      </modelFacet>
+    </topLevelNodes>
+    <topLevelNodes visualID="2002" editPartClassName="VariableSetEditPart" itemSemanticEditPolicyClassName="VariableSetItemSemanticEditPolicy" canonicalEditPolicyClassName="VariableSetCanonicalEditPolicy" compartments="//@diagram/@compartments.0" graphicalNodeEditPolicyClassName="VariableSetGraphicalNodeEditPolicy" createCommandClassName="VariableSetCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="VariableSetEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="VariableSetFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class VariableSetFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureVariableSetLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fVariableSetVariablesCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public VariableSetFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(125)&#xA;, getMapMode().DPtoLP(150)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureVariableSetLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureVariableSetLabelFigure.setText(&quot;VariableSet&quot;);&#xA;fFigureVariableSetLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureVariableSetLabelFigure);&#xA;&#xA;&#xA;&#xA;fVariableSetVariablesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fVariableSetVariablesCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fVariableSetVariablesCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureVariableSetLabelFigure() {&#xA;&#x9;&#x9;return fFigureVariableSetLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getVariableSetVariablesCompartmentFigure() {&#xA;&#x9;&#x9;return fVariableSetVariablesCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="125" height="150"/>
+      </viewmap>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VariableSet"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton/variableSet"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton/variableSet"/>
+      </modelFacet>
+      <labels visualID="5002" editPartClassName="VariableSetNameEditPart" itemSemanticEditPolicyClassName="VariableSetNameItemSemanticEditPolicy" readOnly="true" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureVariableSetLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/VariableSet/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <topLevelNodes visualID="2004" editPartClassName="TransitionFeatureEditPart" itemSemanticEditPolicyClassName="TransitionFeatureItemSemanticEditPolicy" canonicalEditPolicyClassName="TransitionFeatureCanonicalEditPolicy" compartments="//@diagram/@compartments.1 //@diagram/@compartments.2 //@diagram/@compartments.3" graphicalNodeEditPolicyClassName="TransitionFeatureGraphicalNodeEditPolicy" createCommandClassName="TransitionFeatureCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TransitionFeatureEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TransitionFeatureFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransitionFeatureFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTransitionFeatureLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fTransitionFeatureActionCompartmentFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fTransitionFeatureFuzzyConstraintCompartmentFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fTransitionFeatureVarTransformationCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransitionFeatureFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(160)&#xA;, getMapMode().DPtoLP(160)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTransitionFeatureLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTransitionFeatureLabelFigure.setText(&quot;TransitionFeature&quot;);&#xA;fFigureTransitionFeatureLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureTransitionFeatureLabelFigure);&#xA;&#xA;&#xA;&#xA;fTransitionFeatureActionCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fTransitionFeatureActionCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fTransitionFeatureActionCompartmentFigure);&#xA;&#xA;&#xA;&#xA;fTransitionFeatureFuzzyConstraintCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fTransitionFeatureFuzzyConstraintCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fTransitionFeatureFuzzyConstraintCompartmentFigure);&#xA;&#xA;&#xA;&#xA;fTransitionFeatureVarTransformationCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fTransitionFeatureVarTransformationCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fTransitionFeatureVarTransformationCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTransitionFeatureLabelFigure() {&#xA;&#x9;&#x9;return fFigureTransitionFeatureLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getTransitionFeatureActionCompartmentFigure() {&#xA;&#x9;&#x9;return fTransitionFeatureActionCompartmentFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getTransitionFeatureFuzzyConstraintCompartmentFigure() {&#xA;&#x9;&#x9;return fTransitionFeatureFuzzyConstraintCompartmentFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getTransitionFeatureVarTransformationCompartmentFigure() {&#xA;&#x9;&#x9;return fTransitionFeatureVarTransformationCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="160" height="160"/>
+      </viewmap>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton/transitionFeatures"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton/transitionFeatures"/>
+      </modelFacet>
+      <labels visualID="5005" editPartClassName="TransitionFeatureNameEditPart" itemSemanticEditPolicyClassName="TransitionFeatureNameItemSemanticEditPolicy" readOnly="true" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureTransitionFeatureLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <links visualID="4001" editPartClassName="TransitionEditPart" itemSemanticEditPolicyClassName="TransitionItemSemanticEditPolicy" createCommandClassName="TransitionCreateCommand" reorientCommandClassName="TransitionReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TransitionEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TransitionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransitionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransitionFigure() {&#xA;&#x9;&#x9;this.setLineWidth(3);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 255, 140, 0);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedForeground="true"/>
+      </viewmap>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Transition"/>
+        <containmentMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton/transitions"/>
+        <childMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/FuzzyAutomaton/transitions"/>
+        <sourceMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Transition/source"/>
+        <targetMetaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/Transition/target"/>
+      </modelFacet>
+    </links>
+    <links visualID="4003" editPartClassName="TransitionFeatureFeatureToTransitionEditPart" itemSemanticEditPolicyClassName="TransitionFeatureFeatureToTransitionItemSemanticEditPolicy" createCommandClassName="TransitionFeatureFeatureToTransitionCreateCommand" reorientCommandClassName="TransitionFeatureFeatureToTransitionReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TransitionFeatureFeatureToTransitionFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransitionFeatureFeatureToTransitionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransitionFeatureFeatureToTransitionFigure() {&#xA;&#x9;&#x9;this.setLineWidth(3);&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 105, 105, 105);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedForeground="true"/>
+      </viewmap>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="fuzzyAutomaton.genmodel#//fuzzyAutomaton/TransitionFeature/featureToTransition"/>
+      </modelFacet>
+      <labels visualID="6003" editPartClassName="WrappingLabelEditPart" itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy" readOnly="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
+        </viewmap>
+        <modelFacet xsi:type="gmfgen:DesignLabelModelFacet" parser="//@labelParsers/@implementations.1"/>
+      </labels>
+    </links>
+    <compartments visualID="7001" editPartClassName="VariableSetVariableSetVariablesCompartmentEditPart" itemSemanticEditPolicyClassName="VariableSetVariableSetVariablesCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="VariableSetVariableSetVariablesCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0" title="VariableSetVariablesCompartment" needsTitle="false" node="//@diagram/@topLevelNodes.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getVariableSetVariablesCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7002" editPartClassName="TransitionFeatureTransitionFeatureActionCompartmentEditPart" itemSemanticEditPolicyClassName="TransitionFeatureTransitionFeatureActionCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="TransitionFeatureTransitionFeatureActionCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.1 //@diagram/@childNodes.2" title="TransitionFeatureActionCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.2">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getTransitionFeatureActionCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7003" editPartClassName="TransitionFeatureTransitionFeatureFuzzyConstraintCompartmentEditPart" itemSemanticEditPolicyClassName="TransitionFeatureTransitionFeatureFuzzyConstraintCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="TransitionFeatureTransitionFeatureFuzzyConstraintCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.3" title="TransitionFeatureFuzzyConstraintCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.2">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getTransitionFeatureFuzzyConstraintCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7005" editPartClassName="TransitionFeatureTransitionFeatureVarTransformationCompartmentEditPart" itemSemanticEditPolicyClassName="TransitionFeatureTransitionFeatureVarTransformationCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="TransitionFeatureTransitionFeatureVarTransformationCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.5" title="TransitionFeatureVarTransformationCompartment" canCollapse="false" needsTitle="false" node="//@diagram/@topLevelNodes.2">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getTransitionFeatureVarTransformationCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7004" editPartClassName="FuzzyConstraintFuzzyConstraintFuzzyRelationsCompartmentEditPart" itemSemanticEditPolicyClassName="FuzzyConstraintFuzzyConstraintFuzzyRelationsCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="FuzzyConstraintFuzzyConstraintFuzzyRelationsCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.4" title="FuzzyConstraintFuzzyRelationsCompartment" needsTitle="false" node="//@diagram/@childNodes.3">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFuzzyConstraintFuzzyRelationsCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7006" editPartClassName="VarTransformationVarTransformationVarUpdatesCompartmentEditPart" itemSemanticEditPolicyClassName="VarTransformationVarTransformationVarUpdatesCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="VarTransformationVarTransformationVarUpdatesCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.6" title="VarTransformationVarUpdatesCompartment" needsTitle="false" node="//@diagram/@childNodes.5">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getVarTransformationVarUpdatesCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <palette>
+      <groups title="Objects" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Fuzzy Constraint" description="Create new Fuzzy Constraint" genNodes="//@diagram/@childNodes.3"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Fuzzy Relation" description="Create new Fuzzy Relation" genNodes="//@diagram/@childNodes.4"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Input Action" description="Create new Input Action" genNodes="//@diagram/@childNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Output Action" description="Create new Output Action" genNodes="//@diagram/@childNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="State" description="Create new State" genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Transition Features" description="Create new Transition Features" genNodes="//@diagram/@topLevelNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Var Transformation" description="Create new Var Transformation" genNodes="//@diagram/@childNodes.5"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Var Update" description="Create new Var Update" genNodes="//@diagram/@childNodes.6"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Variable" description="Create new Variable" genNodes="//@diagram/@childNodes.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Variable Set" description="Create new Variable Set" genNodes="//@diagram/@topLevelNodes.1"/>
+      </groups>
+      <groups title="Connections" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="FeatureToTransition" description="Create new FeatureToTransition" genLinks="//@diagram/@links.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Transition" description="Add a transition" genLinks="//@diagram/@links.0"/>
+      </groups>
+    </palette>
+    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="es.ucm.modelling.fuzzyautomaton.diagram.general" name="FuzzyAutomaton Diagram">
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="es.ucm.modelling.fuzzyautomaton.diagram.appearance" name="Appearance" kind="Appearance"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="es.ucm.modelling.fuzzyautomaton.diagram.connections" name="Connections" kind="Connections"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="es.ucm.modelling.fuzzyautomaton.diagram.printing" name="Printing" kind="Printing"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="es.ucm.modelling.fuzzyautomaton.diagram.rulersAndGrid" name="Rulers And Grid" kind="RulersAndGrid"/>
+    </preferencePages>
+  </diagram>
+  <plugin printingEnabled="true">
+    <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
+    <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
+    <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
+  </plugin>
+  <editor/>
+  <navigator>
+    <childReferences child="//@diagram"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.0"/>
+    <childReferences parent="//@diagram/@topLevelNodes.1" child="//@diagram/@childNodes.0"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.1"/>
+    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@childNodes.1"/>
+    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@childNodes.2"/>
+    <childReferences parent="//@diagram/@childNodes.3" child="//@diagram/@childNodes.4"/>
+    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@childNodes.3"/>
+    <childReferences parent="//@diagram/@childNodes.5" child="//@diagram/@childNodes.6"/>
+    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@childNodes.5"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.2"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@links.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.2" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.2" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+  </navigator>
+  <diagramUpdater/>
+  <propertySheet>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="appearance"/>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="diagram"/>
+    <tabs xsi:type="gmfgen:GenCustomPropertyTab" iD="domain" label="Core">
+      <filter xsi:type="gmfgen:TypeTabFilter">
+        <types>org.eclipse.gmf.runtime.notation.View</types>
+        <types>org.eclipse.gef.EditPart</types>
+        <generatedTypes>abstractNavigatorItem</generatedTypes>
+      </filter>
+    </tabs>
+  </propertySheet>
+  <domainGenModel href="fuzzyAutomaton.genmodel#/"/>
+  <labelParsers extensibleViaService="true">
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@childNodes.4/@labels.0/@modelFacet //@diagram/@childNodes.3/@labels.0/@modelFacet //@diagram/@childNodes.6/@labels.0/@modelFacet //@diagram/@childNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:ExternalParser" uses="//@diagram/@links.1/@labels.0/@modelFacet"/>
+  </labelParsers>
+  <contextMenus context="//@diagram">
+    <items xsi:type="gmfgen:LoadResourceAction"/>
+  </contextMenus>
+</gmfgen:GenEditorGenerator>

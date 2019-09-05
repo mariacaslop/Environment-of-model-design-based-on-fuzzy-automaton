@@ -1,0 +1,64 @@
+-- Delete border FuzzyConstraint
+var fuzzyConstraintFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'FuzzyConstraintFigure');
+delete fuzzyConstraintFigure.border;
+fuzzyConstraintFigure.outline = false;
+
+-- Delete border VarTransformationFigure
+var varTransformationFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'VarTransformationFigure');
+delete varTransformationFigure.border;
+varTransformationFigure.outline = false;
+
+-- Resize fuzzy relations and var updates
+var preferredSize1 = new GmfGraph!Dimension;
+preferredSize1.dx = 100;
+preferredSize1.dy = 25;
+
+var fuzzyRelationFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'FuzzyRelationFigure');
+fuzzyRelationFigure.preferredSize = preferredSize1;
+
+var preferredSize2 = new GmfGraph!Dimension;
+preferredSize2.dx = 100;
+preferredSize2.dy = 25;
+
+var varUpdateFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'VarUpdateFigure');
+varUpdateFigure.preferredSize = preferredSize2;
+
+var preferredSize3 = new GmfGraph!Dimension;
+preferredSize3.dx = 90;
+preferredSize3.dy = 25;
+
+var inputFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'InputFigure');
+inputFigure.preferredSize = preferredSize3;
+
+var preferredSize4 = new GmfGraph!Dimension;
+preferredSize4.dx = 90;
+preferredSize4.dy = 25;
+
+var outputFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'OutputFigure');
+outputFigure.preferredSize = preferredSize4;
+
+-- Find the VariableSet figure
+--
+--var variableSetVariablesCompartmentFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'VariableSetVariablesCompartmentFigure');
+
+-- ... and add a stack layout to it
+--variableSetVariablesCompartment.layout = new GmfGraph!StackLayout;
+
+-- Find the Variable figure
+var variableFigure = GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'VariableFigure');
+
+-- ... delete its border
+delete variableFigure.border;
+
+-- ... set its outline to false
+variableFigure.outline = false;
+
+
+var preferredSize5 = new GmfGraph!Dimension;
+preferredSize5.dx = 90;
+preferredSize5.dy = 25;
+
+variableFigure.preferredSize = preferredSize5;
+
+
+

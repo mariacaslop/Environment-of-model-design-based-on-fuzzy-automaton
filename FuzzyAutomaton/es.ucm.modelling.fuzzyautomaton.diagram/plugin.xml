@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="fza_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="fza_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/FuzzyAutomatonDiagramFile.gif"
+         extensions="fza_diagram"
+         default="true"
+         class="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditor"
+         matchingStrategy="fuzzyAutomaton.diagram.part.FuzzyAutomatonMatchingStrategy"
+         contributorClass="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="fuzzyAutomaton.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/FuzzyAutomatonDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="fuzzyAutomaton.diagram.part.FuzzyAutomatonCreationWizard"
+  	     id="fuzzyAutomaton.diagram.part.FuzzyAutomatonCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="es.ucm.modelling.fuzzyautomaton.diagram.InitDiagram"
+            nameFilter="*.fza"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="fuzzyAutomaton.diagram.part.FuzzyAutomatonInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="es.ucm.modelling.fuzzyautomaton.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="FuzzyAutomatonPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="FuzzyAutomatonPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="FuzzyAutomatonPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="FuzzyAutomatonRender">
+         <Priority name="Lowest"/>
+         <ViewId id="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="fuzzyAutomaton.diagram.providers.FuzzyAutomatonMarkerNavigationProvider">
+         <MarkerType name="es.ucm.modelling.fuzzyautomaton.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="FuzzyAutomaton Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="fuzzyAutomaton.diagram.providers.FuzzyAutomatonValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="fuzzyAutomaton.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="es.ucm.modelling.fuzzyautomaton.diagram.general"
+            name="%prefpage.es.ucm.modelling.fuzzyautomaton.diagram.general"
+            class="fuzzyAutomaton.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="es.ucm.modelling.fuzzyautomaton.diagram.appearance"
+            name="%prefpage.es.ucm.modelling.fuzzyautomaton.diagram.appearance"
+            category="es.ucm.modelling.fuzzyautomaton.diagram.general"
+            class="fuzzyAutomaton.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="es.ucm.modelling.fuzzyautomaton.diagram.connections"
+            name="%prefpage.es.ucm.modelling.fuzzyautomaton.diagram.connections"
+            category="es.ucm.modelling.fuzzyautomaton.diagram.general"
+            class="fuzzyAutomaton.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="es.ucm.modelling.fuzzyautomaton.diagram.printing"
+            name="%prefpage.es.ucm.modelling.fuzzyautomaton.diagram.printing"
+            category="es.ucm.modelling.fuzzyautomaton.diagram.general"
+            class="fuzzyAutomaton.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="es.ucm.modelling.fuzzyautomaton.diagram.rulersAndGrid"
+            name="%prefpage.es.ucm.modelling.fuzzyautomaton.diagram.rulersAndGrid"
+            category="es.ucm.modelling.fuzzyautomaton.diagram.general"
+            class="fuzzyAutomaton.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="es.ucm.modelling.fuzzyautomaton.diagram"
+            labelProvider="fuzzyAutomaton.diagram.sheet.FuzzyAutomatonSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="es.ucm.modelling.fuzzyautomaton.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="es.ucm.modelling.fuzzyautomaton.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="fuzzyAutomaton.diagram.sheet.FuzzyAutomatonPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="fuzzyAutomaton.diagram.providers.FuzzyAutomatonViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="fza"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="FuzzyAutomaton"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2004,3001,3002,3003,3004,3005,3006,3007"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4003"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="fuzzyAutomaton.diagram.providers.FuzzyAutomatonEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="FuzzyAutomaton"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2004,3001,3002,3003,3004,3005,3006,3007"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4003"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5002,5005,5003,5006,5007,5008,5011,5009,5010"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002,7003,7005,7004,7006"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfFuzzyAutomatonEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.FuzzyAutomatonEditPart" id="FuzzyAutomaton_1000"/>
+         <context elements="FuzzyAutomaton_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfStateEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.StateEditPart" id="State_2001"/>
+         <context elements="State_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfVariableSetEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.VariableSetEditPart" id="VariableSet_2002"/>
+         <context elements="VariableSet_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfTransitionFeatureEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.TransitionFeatureEditPart" id="TransitionFeature_2004"/>
+         <context elements="TransitionFeature_2004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfVariableEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.VariableEditPart" id="Variable_3001"/>
+         <context elements="Variable_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfInputEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.InputEditPart" id="Input_3002"/>
+         <context elements="Input_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfOutputEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.OutputEditPart" id="Output_3003"/>
+         <context elements="Output_3003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfFuzzyConstraintEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.FuzzyConstraintEditPart" id="FuzzyConstraint_3004"/>
+         <context elements="FuzzyConstraint_3004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfFuzzyRelationEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.FuzzyRelationEditPart" id="FuzzyRelation_3005"/>
+         <context elements="FuzzyRelation_3005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfVarTransformationEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.VarTransformationEditPart" id="VarTransformation_3006"/>
+         <context elements="VarTransformation_3006"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="fuzzyAutomaton.diagram.providers.assistants.FuzzyAutomatonModelingAssistantProviderOfVarUpdateEditPart">
+         <Priority name="Lowest"/>
+         <object class="fuzzyAutomaton.diagram.edit.parts.VarUpdateEditPart" id="VarUpdate_3007"/>
+         <context elements="VarUpdate_3007"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="fuzzyAutomaton.diagram.providers.FuzzyAutomatonIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="fuzzyAutomaton.diagram.providers.FuzzyAutomatonParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="fuzzyAutomaton.diagram.providers.FuzzyAutomatonShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001,2002,2004"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.FuzzyAutomaton_1000"
+               name="%metatype.name.FuzzyAutomaton_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="FuzzyAutomaton"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.FuzzyAutomatonEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.State_2001"
+               name="%metatype.name.State_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="State"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.StateEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.VariableSet_2002"
+               name="%metatype.name.VariableSet_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="VariableSet"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.VariableSetEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.TransitionFeature_2004"
+               name="%metatype.name.TransitionFeature_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TransitionFeature"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.TransitionFeatureEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.Variable_3001"
+               name="%metatype.name.Variable_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Variable"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.VariableEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.Input_3002"
+               name="%metatype.name.Input_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Input"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.InputEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.Output_3003"
+               name="%metatype.name.Output_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Output"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.OutputEditHelper">
+            <param name="semanticHint" value="3003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.FuzzyConstraint_3004"
+               name="%metatype.name.FuzzyConstraint_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="FuzzyConstraint"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.FuzzyConstraintEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.FuzzyRelation_3005"
+               name="%metatype.name.FuzzyRelation_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="FuzzyRelation"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.FuzzyRelationEditHelper">
+            <param name="semanticHint" value="3005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.VarTransformation_3006"
+               name="%metatype.name.VarTransformation_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="VarTransformation"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.VarTransformationEditHelper">
+            <param name="semanticHint" value="3006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.VarUpdate_3007"
+               name="%metatype.name.VarUpdate_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="VarUpdate"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.VarUpdateEditHelper">
+            <param name="semanticHint" value="3007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <metamodelType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.Transition_4001"
+               name="%metatype.name.Transition_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Transition"
+               edithelper="fuzzyAutomaton.diagram.edit.helpers.TransitionEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="fuzzyAutomaton">
+         <specializationType
+               id="es.ucm.modelling.fuzzyautomaton.diagram.TransitionFeatureFeatureToTransition_4003"
+               name="%metatype.name.TransitionFeatureFeatureToTransition_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="es.ucm.modelling.fuzzyautomaton.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="es.ucm.modelling.fuzzyautomaton.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="es.ucm.modelling.fuzzyautomaton.diagram.TypeContext">
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.FuzzyAutomaton_1000"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.State_2001"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.VariableSet_2002"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.TransitionFeature_2004"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.Variable_3001"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.Input_3002"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.Output_3003"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.FuzzyConstraint_3004"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.FuzzyRelation_3005"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.VarTransformation_3006"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.VarUpdate_3007"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.Transition_4001"/>
+         <elementType ref="es.ucm.modelling.fuzzyautomaton.diagram.TransitionFeatureFeatureToTransition_4003"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="es.ucm.modelling.fuzzyautomaton.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="es.ucm.modelling.fuzzyautomaton.diagram"
+           properties="isURIEditorInput"
+           class="fuzzyAutomaton.diagram.part.FuzzyAutomatonUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="es.ucm.modelling.fuzzyautomaton.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="es.ucm.modelling.fuzzyautomaton.diagram"
+           properties="isShortcut"
+           class="fuzzyAutomaton.diagram.part.FuzzyAutomatonShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="es.ucm.modelling.fuzzyautomaton.diagram.resourceContent"/>
+			<contentExtension pattern="es.ucm.modelling.fuzzyautomaton.diagram.domainResourceContent"/>
+            <contentExtension pattern="es.ucm.modelling.fuzzyautomaton.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="es.ucm.modelling.fuzzyautomaton.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="es.ucm.modelling.fuzzyautomaton.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonNavigatorContentProvider" 
+            labelProvider="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonNavigatorLabelProvider"
+            icon="icons/obj16/FuzzyAutomatonDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="fza_diagram"/>
+               </and>
+               <instanceof value="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="es.ucm.modelling.fuzzyautomaton.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="es.ucm.modelling.fuzzyautomaton.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="es.ucm.modelling.fuzzyautomaton.diagram.navigatorSorter" 
+               class="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="fza_diagram"/>
+                  </and>
+                  <instanceof value="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="es.ucm.modelling.fuzzyautomaton.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonDomainNavigatorContentProvider" 
+            labelProvider="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonDomainNavigatorLabelProvider"
+            icon="icons/obj16/FuzzyAutomatonDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="fza"/>
+               </and>
+               <instanceof value="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="es.ucm.modelling.fuzzyautomaton.diagram.navigatorActionProvider"
+            class="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="es.ucm.modelling.fuzzyautomaton.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="es.ucm.modelling.fuzzyautomaton.diagram.navigatorLinkHelper"
+            class="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="es.ucm.modelling.fuzzyautomaton.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="fuzzyAutomaton.diagram.navigator.FuzzyAutomatonAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="fuzzyAutomaton.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="fuzzyAutomaton.diagram.updateDiagram"
+         contextId="fuzzyAutomaton.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="es.ucm.modelling.fuzzyautomaton.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="fuzzyAutomaton.diagram.edit.parts.FuzzyAutomatonEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="es.ucm.modelling.fuzzyautomaton.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="fuzzyAutomaton.diagram.part.FuzzyAutomatonDiagramEditorID"
+         defaultHandler="fuzzyAutomaton.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

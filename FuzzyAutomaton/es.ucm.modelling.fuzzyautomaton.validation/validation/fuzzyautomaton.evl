@@ -1,0 +1,260 @@
+pre ValidExpression {
+
+	var expressionValidation := new Native('es.ucm.modelling.fuzzyautomaton.validation.tool.ExpressionValidation');
+
+// All the variables declared in the model are included in the ExpressionValidation scope
+
+	for (variable in Variable.getAllOfType()) {
+	
+  		expressionValidation.setVariable(variable.name);
+	}
+
+}
+
+
+// The automaton only presents an initial state
+
+context FuzzyAutomaton {
+
+  
+	constraint InitialStateValidation1 {
+	
+		
+		check:  self.states.select(s|s.isInitial).size()<=1
+		
+		message : 'The model presents more than one initial state'
+		
+	}
+	
+	constraint InitialStateValidation2 {
+	
+		
+		check:  self.states.select(s|s.isInitial).size()=1
+		
+		message : 'The model must include an initial state'
+		
+	}
+}
+
+// Variable's name does not begin with a digit
+
+context Variable {
+
+   constraint VariableNameValidation {
+		
+		check : self.name.matches("^[^0-9][A-Za-z0-9_]*")
+		
+		message : 'Variable name cannot begin with a digit '
+		
+	
+	}
+}
+
+
+
+// Variable set does not include duplicate variables
+
+context VariableSet {
+
+  
+	constraint DiffVariableNameValidation {
+	
+		
+		check {
+		
+			var duplicate : Integer;
+		
+			for (variable in self.variables) {
+		
+				if (not(self.variables.one(v| v.name=variable.name)))	{duplicate+=1;}
+			}	
+		
+		    return duplicate = 0;
+		}
+		
+		
+		message : 'Different variables have the same name' 
+		
+	}
+
+}
+
+//Expressions associated to outputs only contain arithmetic operators
+
+context Output {
+
+	constraint arithmeticExpressionValidation{
+	
+		guard: 	self.expression.isDefined()
+		
+		check {
+		
+			var correct : Boolean= true;
+		
+			for (expr in self.expression) {
+				
+				if (not expr.matches("^[^<>=&!]*$"))	{correct=false;}
+			}	
+		
+		    return correct;
+					
+		} 
+		
+		message : 'Expressions only can contain arithmetic operators '
+	
+	}
+
+}
+
+
+context FuzzyRelation {
+
+
+	
+// Ternary Fuzzy Relation: Expresssion3 is mandatory 
+// Expressions in Fuzzy Relations only contain arithmetic operators
+
+ 	constraint checkExpressionTernValidation {
+ 	
+ 	
+		guard : self.tFRelation = FuzzyRelationType#TERN
+	 	
+	 	check: 	self.expression1.isDefined() and self.expression2.isDefined() and self.expression3.isDefined()
+		
+	   	message : 'Expression3 must be defined in Ternary Fuzzy Relations'
+
+	}
+	
+	constraint arithmeticExpressionTernValidation{
+	
+		guard: 	self.expression1.isDefined() and self.expression2.isDefined() and self.expression3.isDefined()
+		
+		check : self.expression1.matches("^[^<>=&!]*$") and self.expression2.matches("^[^<>=&!]*$") and self.expression3.matches("^[^<>=&!]*$")
+		
+		message : 'Expressions only can contain arithmetic operators '
+	
+	}
+	
+	constraint arithmeticExpressionBinValidation{
+	
+		guard: 	self.expression1.isDefined() and self.expression2.isDefined()
+		
+		check : self.expression1.matches("^[^<>=&!]*$") and self.expression2.matches("^[^<>=&!]*$")
+		
+		message : 'Expressions only can contain arithmetic operators '
+	
+	}
+}
+
+
+// Expression validation of VarUpdate
+// Variable updates only contain arithmetic expressions
+
+
+context VarUpdate {
+
+
+	constraint CorrectExpressionUpdate {
+	
+	check	{ var errorMsg : String="";
+				
+			  errorMsg= expressionValidation.valExpression(self.expression);
+			  
+			  return errorMsg ="";
+			  
+			  }
+	
+	message : "Incorrect expression. "  + errorMsg 
+				
+	}
+	
+	constraint arithmeticExpressionValidation{
+	
+		guard: 	self.expression.isDefined()
+		
+		check : self.expression.matches("^[^<>=&!]*$")
+		
+		message : 'Expressions only can contain arithmetic operators '
+	
+	}
+
+}
+
+context State {
+	
+	
+	constraint StatesWithTransitionValidation {
+		
+		check: (self.incoming.size()>=1) or (self.outgoing.size()>=1)
+		
+		message : 'The states must include at least an incoming transition or an outgoing transition'
+	
+	}
+}
+
+//Expression validation of FuzzyRelation
+
+
+context FuzzyRelation {
+
+	constraint checkExpressionTernValidation {
+ 	
+ 	
+		guard : self.tFRelation = FuzzyRelationType#TERN and self.expression1.isDefined() and self.expression2.isDefined() 
+	 	
+	 	check: 	self.expression3.isDefined()
+		
+	   	message : 'Expression3 must be defined in Ternary Fuzzy Relations'
+
+	}
+	
+	constraint checkExpressionBinaryValidation {
+ 	
+ 	
+		guard : self.tFRelation <> FuzzyRelationType#TERN and self.expression1.isDefined() and self.expression2.isDefined()
+	 	
+	 	check: 	self.expression3.isUndefined()
+		
+	   	message : 'Expression3 must not be defined in Binary Fuzzy Relations'
+
+	}
+
+	constraint CorrectExpressionFuzzyRelationTERN {	
+	
+	    guard: self.tfRelation = FuzzyRelationType#TERN and self.expression1.isDefined() and self.expression2.isDefined() and self.expression3.isDefined()
+		
+		check	{ var errorMsg : String="";
+				
+				  errorMsg= expressionValidation.valExpression(self.expression1);
+ 				  errorMsg=  errorMsg + expressionValidation.valExpression(self.expression2); 
+ 				  errorMsg=  errorMsg +expressionValidation.valExpression(self.expression3);
+ 				  
+ 				  return errorMsg ="";
+ 				  
+ 				  }
+	
+		message : "Incorrect expression. " + errorMsg
+			
+	}
+
+
+	constraint CorrectExpressionFuzzyRelationBIN {
+	
+		guard: self.tFRelation <> FuzzyRelationType#TERN and self.expression1.isDefined() and self.expression2.isDefined()
+		
+	
+		check	{ var errorMsg : String="";
+				
+				  errorMsg= expressionValidation.valExpression(self.expression1);
+ 				  errorMsg=  errorMsg + expressionValidation.valExpression(self.expression2); 
+ 				  
+ 				  return errorMsg ="";
+ 				  
+ 				  }
+	
+		message : "Incorrect expression. "  + errorMsg
+		
+		}
+	}
+
+

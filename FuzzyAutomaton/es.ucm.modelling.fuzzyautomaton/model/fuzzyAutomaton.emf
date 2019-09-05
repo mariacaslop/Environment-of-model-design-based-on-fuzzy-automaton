@@ -1,0 +1,118 @@
+@namespace(uri="fuzzyAutomaton", prefix="fuzzyAutomaton")
+package fuzzyAutomaton;
+
+@gmf.diagram(model.extension="fza", diagram.extension="fza_diagram")
+class FuzzyAutomaton {
+  attr String[1] name;
+  attr TNormType[1] tNorm;
+  val State[+] states;
+  val Transition[+] transitions;
+  val VariableSet[1] variableSet;
+  val TransitionFeature[+] transitionFeatures; 
+}
+
+enum TNormType {
+  HAMACHER = 0;
+  GODEL =1;
+}
+
+@gmf.node(label.placement="none", margin="10", figure="ellipse", resizable="false", tool.name="State", border.width="2", border.color="154,205,50", color="154,205,50")
+class State {
+  attr Boolean[1] isInitial = false;  
+  ref Transition[*]#target incoming;
+  ref Transition[*]#source outgoing;
+}
+
+@gmf.link(source="source", target="target", target.decoration="arrow",
+color="255,140,0", width="3", tool.name="Transition", tool.description="Add a transition")
+class Transition {
+  ref State[1]#outgoing source;
+  ref State[1]#incoming target;
+  ref TransitionFeature[1]#featureToTransition feature; 
+}
+
+@gmf.node(label.readOnly= "true", size="125,150", label="name", tool.name="Variable Set")
+class VariableSet {
+  readonly attr String[1] name="Variable Set";
+  
+  @gmf.compartment(layout="list")
+  val Variable[+] variables;  
+}
+
+@gmf.node( label="name", tool.name="Variable", resizable="false")
+class Variable {
+  attr String[1] name;
+  attr Double[1] value= 0;
+}
+
+@gmf.node(label.readOnly= "true",label="name",size="160,160", tool.name="Transition Features")
+class TransitionFeature {
+  readonly attr String[1] name="Transition Feature";
+  
+  @gmf.link(style="dash", width="3", color="105,105,105")
+  ref Transition[+]#feature featureToTransition;
+  
+  @gmf.compartment(layout="list", collapsible="false")  
+  val Action[1] action; 
+  
+  @gmf.compartment(layout="list", collapsible="false")   
+  val FuzzyConstraint[0..1] fuzzyConstraint; 
+  
+  @gmf.compartment(layout="list", collapsible="false")   
+  val VarTransformation[0..1] varTransformation;   
+}
+
+abstract class Action {
+  attr String[1] name;
+}
+
+@gmf.node(label="name", tool.name="Input Action", size="150,25")
+class Input extends Action {
+  ref Variable[*] parameters;
+}
+
+@gmf.node(label="name", tool.name="Output Action", size="150,25")
+class Output extends Action {
+  attr String[*] expression;
+}
+
+@gmf.node(label="name, tNorm", label.readOnly="true", tool.name="Fuzzy Constraint", label.pattern="{0} ({1})" )
+class FuzzyConstraint {
+  readonly attr String[1] name = "Fuzzy Constraint";
+  attr TNormType[1] tNorm;
+  
+  @gmf.compartment(layout="list")  
+  val FuzzyRelation[+] fuzzyRelations;
+}
+
+@gmf.node(label="tFRelation, expression1, expression2, expression3, delta", label.readOnly="true",  
+label.parser="MessageFormatParser", label.pattern="{1} {0} {2} {0} {3} {4}", size="150,25",
+tool.name="Fuzzy Relation")
+class FuzzyRelation {
+  attr FuzzyRelationType[1] tFRelation;
+  attr String[1] expression1;
+  attr String[1] expression2;
+  attr String expression3;
+  attr Double[1] delta = 0;
+}
+
+enum FuzzyRelationType {
+  EQ = 0;
+  GTE = 1;
+  LTE = 2;
+  TERN = 3;
+}
+
+@gmf.node(label="name", label.readOnly="true", tool.name="Var Transformation")
+class VarTransformation {
+  readonly attr String[1] name = "Var Transformation";
+  
+  @gmf.compartment(layout="list")  
+  val VarUpdate[+] varUpdates;
+}
+
+@gmf.node(label="expression", tool.name="Var Update", label.readOnly="true", label.icon="false", size="150,25")
+class VarUpdate {
+  ref Variable[1] variable;
+  attr String[1] expression;  
+}

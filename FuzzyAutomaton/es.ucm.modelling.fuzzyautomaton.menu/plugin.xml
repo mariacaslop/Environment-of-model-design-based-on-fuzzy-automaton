@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=file">
+         <menu
+               id="FuzzyAutomaton"
+               label="Fuzzy Automaton">
+            <command
+                  commandId="es.ucm.modelling.fuzzyautomaton.menu.command.GenerateFuzzyAutomaton"
+                  label="Generate Fuzzy Automaton"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="es.ucm.modelling.fuzzyautomaton.menu.command.GenerateFuzzyAutomatonHandler"
+            id="es.ucm.modelling.fuzzyautomaton.menu.command.GenerateFuzzyAutomaton"
+            name="GenerateFuzzyAutomaton">
+      </command>
+   </extension>
+
+</plugin>

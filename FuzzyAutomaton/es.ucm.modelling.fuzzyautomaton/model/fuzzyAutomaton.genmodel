@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/es.ucm.modelling.fuzzyautomaton/src"
+    modelPluginID="es.ucm.modelling.fuzzyautomaton" modelName="FuzzyAutomaton" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>fuzzyAutomaton.emf</foreignModel>
+  <genPackages prefix="FuzzyAutomaton" disposableProviderFactory="true" ecorePackage="fuzzyAutomaton.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fuzzyAutomaton.ecore#//TNormType">
+      <genEnumLiterals ecoreEnumLiteral="fuzzyAutomaton.ecore#//TNormType/HAMACHER"/>
+      <genEnumLiterals ecoreEnumLiteral="fuzzyAutomaton.ecore#//TNormType/GODEL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fuzzyAutomaton.ecore#//FuzzyRelationType">
+      <genEnumLiterals ecoreEnumLiteral="fuzzyAutomaton.ecore#//FuzzyRelationType/EQ"/>
+      <genEnumLiterals ecoreEnumLiteral="fuzzyAutomaton.ecore#//FuzzyRelationType/GTE"/>
+      <genEnumLiterals ecoreEnumLiteral="fuzzyAutomaton.ecore#//FuzzyRelationType/LTE"/>
+      <genEnumLiterals ecoreEnumLiteral="fuzzyAutomaton.ecore#//FuzzyRelationType/TERN"/>
+    </genEnums>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//FuzzyAutomaton">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyAutomaton/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyAutomaton/tNorm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//FuzzyAutomaton/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//FuzzyAutomaton/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//FuzzyAutomaton/variableSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//FuzzyAutomaton/transitionFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//State/isInitial"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//State/incoming"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//State/outgoing"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//Transition/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//Transition/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//Transition/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//VariableSet">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//VariableSet/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//VariableSet/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//Variable/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//Variable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//TransitionFeature">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//TransitionFeature/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//TransitionFeature/featureToTransition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//TransitionFeature/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//TransitionFeature/fuzzyConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//TransitionFeature/varTransformation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="fuzzyAutomaton.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//Action/name"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//Input">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//Input/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//Output">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//Output/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//FuzzyConstraint">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyConstraint/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyConstraint/tNorm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//FuzzyConstraint/fuzzyRelations"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//FuzzyRelation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyRelation/tFRelation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyRelation/expression1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyRelation/expression2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyRelation/expression3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//FuzzyRelation/delta"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//VarTransformation">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//VarTransformation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//VarTransformation/varUpdates"/>
+    </genClasses>
+    <genClasses ecoreClass="fuzzyAutomaton.ecore#//VarUpdate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fuzzyAutomaton.ecore#//VarUpdate/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fuzzyAutomaton.ecore#//VarUpdate/expression"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

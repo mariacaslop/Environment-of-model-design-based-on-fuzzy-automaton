@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tools
+Bundle-SymbolicName: es.ucm.modelling.fuzzyautomaton.validation.tool;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.eclipse.epsilon.examples.tools
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.epsilon.common.dt;bundle-version="1.5.0"
+Export-Package: es.ucm.modelling.fuzzyautomaton.validation.tool

@@ -1,0 +1,7 @@
+# Tracing options for the es.ucm.modelling.fuzzyautomaton.diagram plug-in
+
+# Common issues
+es.ucm.modelling.fuzzyautomaton.diagram/debug=false
+
+# Visual IDs
+es.ucm.modelling.fuzzyautomaton.diagram/debug/visualID=false

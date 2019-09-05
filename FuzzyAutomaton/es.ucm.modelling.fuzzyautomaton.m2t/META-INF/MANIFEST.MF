@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: M2t
+Bundle-SymbolicName: es.ucm.modelling.fuzzyautomaton.m2t;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: es.ucm.modelling.fuzzyautomaton.m2t.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.epsilon.common.dt;bundle-version="1.5.0",
+ org.eclipse.epsilon.emc.emf;bundle-version="1.5.0",
+ org.eclipse.epsilon.egl.engine;bundle-version="1.5.0",
+ org.eclipse.epsilon.eol.dt;bundle-version="1.5.0",
+ es.ucm.modelling.fuzzyautomaton;bundle-version="0.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: es.ucm.modelling.fuzzyautomaton.m2t
+Bundle-ActivationPolicy: lazy
+Export-Package: es.ucm.modelling.fuzzyautomaton.m2t
